@@ -15,6 +15,7 @@ contribute.
 3. [Comments](#comments)
 4. [Format](#format)
 5. [Practical example](#example)
+6. [Sass](#sass)
 
 
 <a name="general-principles"></a>
@@ -305,4 +306,25 @@ An example of various conventions.
 .cell--important {
     border-width: 4px;
 }
+```
+
+
+<a name="sass"></a>
+## 5. Sass
+
+When working with Sass files only have a single main sass file and @include all other sass chunk files. I prefer to call
+my main sass file styles.scss.
+Break up sass files into manageable chunks, I prefer to separate chunks by their layout (header, footer, sidebar, grids
+base etc. This allows for greater flexibility of your files as organization, since everything gets compiled into a single
+css file, we have more flexibility with how our files are setup.
+
+Main styles.scss file
+```css
+@import 'reset';
+@import 'base';
+@import 'grids';
+@import 'snippets';
+@import 'header';
+@import 'sidebar';
+@import 'footer';
 ```
