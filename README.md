@@ -311,6 +311,7 @@ An example of various conventions.
 
 <a name="sass"></a>
 ## 5. Sass - Syntactically Awesome Stylesheet
+[Syntactically Awesome Stylesheets](http://sass-lang.com/)
 
 When working with Sass files try to create a single main sass file when possible and @include all other
 sass files. I prefer to call my main sass file styles.scss.
