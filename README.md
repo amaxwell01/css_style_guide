@@ -310,13 +310,14 @@ An example of various conventions.
 
 
 <a name="sass"></a>
-## 5. Sass
+## 5. Sass - Syntactically Awesome Stylesheet
 
-When working with Sass files only have a single main sass file and @include all other sass chunk files. I prefer to call
-my main sass file styles.scss.
-Break up sass files into manageable chunks, I prefer to separate chunks by their layout (header, footer, sidebar, grids
-base etc. This allows for greater flexibility of your files as organization, since everything gets compiled into a single
-css file, we have more flexibility with how our files are setup.
+When working with Sass files try to create a single main sass file when possible and @include all other
+sass files. I prefer to call my main sass file styles.scss.
+
+Try to break up sass files into manageable files, I prefer to separate my sass by their layout/context 
+(header, footer, sidebar, grids, type, base etc.) This allows for greater flexibility of your files and added 
+organization, since everything should get compiled into a single css file for production.
 
 Main styles.scss file
 ```css
@@ -327,4 +328,13 @@ Main styles.scss file
 @import 'header';
 @import 'sidebar';
 @import 'footer';
+```
+
+When naming all sass include files, prefix them with an underscore so that the sass compiler doesn't create css
+versions of the file.
+
+Example:
+```css
+base.scss will get converted to base.css
+_base.scss will NOT get converted and it will only be used as a sass include
 ```
