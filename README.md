@@ -152,6 +152,8 @@ in useful diffs and blames.
 
 If declarations are to be consistently ordered, it should be in accordance with
 a single, simple principle. My preference is for strict alphabetical ordering.
+Ignore vendor-specific prefixes for sorting purposes. However, multiple vendor-specific prefixes for a certain
+CSS property should be kept sorted (e.g. -moz prefix comes before -webkit).
 
 ```css
 .selector {
