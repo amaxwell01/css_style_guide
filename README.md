@@ -119,7 +119,6 @@ in useful diffs and blames.
 * Use single or double quotes consistently. Preference is for double quotes,
   e.g., `content: ""`.
 * Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
-* _Where allowed_, avoid specifying units for zero-values, e.g., `margin: 0`.
 * Include a space after each comma in comma-separated property or function
   values.
 * Include a semi-colon at the end of the last declaration in a declaration
@@ -132,14 +131,14 @@ in useful diffs and blames.
 .selector-1,
 .selector-2,
 .selector-3[type="text"] {
+    background: #fff;
+    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    color: #333;
     display: block;
     font-family: helvetica, arial, sans-serif;
-    color: #333;
-    background: #fff;
-    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
 }
 
 .selector-a,
@@ -151,55 +150,33 @@ in useful diffs and blames.
 #### Declaration order
 
 If declarations are to be consistently ordered, it should be in accordance with
-a single, simple principle. My preference is for structurally important
-properties (e.g. positioning and box-model) to be declared prior to all
-others.
+a single, simple principle. My preference is for strict alphabetical ordering.
 
 ```css
 .selector {
-    /* Positioning */
-    position: absolute;
-    z-index: 10;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    /* Display & Box Model */
-    display: inline-block;
-    overflow: hidden;
-    box-sizing: border-box;
-    width: 100px;
-    height: 100px;
-    padding: 10px;
-    border: 10px solid #333;
-    margin: 10px;
-
-    /* Other */
     background: #000;
-    color: #fff
+    border: 10px solid #333;
+    bottom: 0;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
     font-family: sans-serif;
     font-size: 16px;
+    height: 100px;
+    left: 0;
+    margin: 10px;
+    padding: 10px;
+    position: absolute;
+    right: 0;
     text-align: right;
+    top: 0;
+    width: 100px;
+    z-index: 10;
 }
 ```
 
-Strict alphabetical ordering is also relatively popular, but the drawback is
-that it separates related properties. For example, position offsets are no
-longer grouped together and box-model properties can end up spread throughout a
-declaration block.
 
 #### Exceptions and slight deviations
-
-Large blocks of single declarations can use a slightly different, single-line
-format. In this case, a space should be included after the opening brace and
-before the closing brace.
-
-```css
-.selector-1 { width: 10%; }
-.selector-2 { width: 20%; }
-.selector-3 { width: 30%; }
-```
 
 Long, comma-separated property values - such as collections of gradients or
 shadows - can be arranged across multiple lines in an effort to improve
