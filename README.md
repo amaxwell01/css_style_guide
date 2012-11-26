@@ -116,7 +116,7 @@ in useful diffs and blames.
 * Include one declaration per line in a declaration block.
 * Use one level of indentation for each declaration.
 * Include single space after the colon of a declaration.
-* Use lowercase and shorthand hex values, e.g., `#aaa`.
+* Use uppercase and shorthand hex values, e.g., `#AAA`.
 * Use single or double quotes consistently. Preference is for double quotes,
   e.g., `content: ""`.
 * Quote attribute values in selectors, e.g., `input[type="checkbox"]`.
@@ -127,19 +127,21 @@ in useful diffs and blames.
 * Place the closing brace of a ruleset in the same column as the first
   character of the ruleset.
 * Separate each ruleset by a blank line.
+* Exclude all prefixed 0's when values are floats: Example .5 vs 0.5
 
 ```css
 .selector-1,
 .selector-2,
 .selector-3[type="text"] {
-    background: #fff;
-    background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
+    background: #FFF;
+    background: linear-gradient(#FFF, rgba(0, 0, 0, .8));
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     color: #333;
     display: block;
     font-family: helvetica, arial, sans-serif;
+    line-height: .5em;
 }
 
 .selector-a,
@@ -161,7 +163,7 @@ CSS property should be kept sorted (e.g. -moz prefix comes before -webkit).
     border: 10px solid #333;
     bottom: 0;
     box-sizing: border-box;
-    color: #fff;
+    color: #FFF;
     display: inline-block;
     font-family: sans-serif;
     font-size: 16px;
@@ -189,11 +191,11 @@ be used; one example is shown below.
 ```css
 .selector {
     background-image:
-        linear-gradient(#fff, #ccc),
-        linear-gradient(#f3c, #4ec);
+        linear-gradient(#FFF, #CCC),
+        linear-gradient(#F3C, #4EC);
     box-shadow:
         1px 1px 1px #000,
-        2px 2px 1px 1px #ccc inset;
+        2px 2px 1px 1px #CCC inset;
 }
 ```
 
@@ -278,7 +280,7 @@ An example of various conventions.
     height: 100%;
     /* Set the inter-cell spacing */
     padding: 0 10px;
-    border: 2px solid #333;
+    border: solid 2px #333;
     vertical-align: top;
     /* Reset white-space */
     white-space: normal;
@@ -289,17 +291,27 @@ An example of various conventions.
 /* Cell states */
 
 .cell.is-animating {
-    background-color: #fffdec;
+    background-color: #FFFDEC;
 }
 
 /* Cell dimensions
    ========================================================================== */
 
-.cell-1 { width: 10%; }
-.cell-2 { width: 20%; }
-.cell-3 { width: 30%; }
-.cell-4 { width: 40%; }
-.cell-5 { width: 50%; }
+.cell-1 { 
+    width: 10%;
+}
+.cell-2 {
+    width: 20%;
+}
+.cell-3 {
+    width: 30%;
+}
+.cell-4 {
+    width: 40%;
+}
+.cell-5 {
+    width: 50%;
+}
 
 /* Cell modifiers
    ========================================================================== */
