@@ -83,6 +83,12 @@ Example:
 /* Sub-section comment block
    ========================================================================== */
 
+/* ==========================================================================
+   Media Queries
+   * How to use breakpoint
+   * @include breakpoint(large) { width: 60%; }
+   ========================================================================== */
+
 /**
  * Short description using Doxygen-style comment format
  *
