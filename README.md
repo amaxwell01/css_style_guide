@@ -360,8 +360,29 @@ base.scss will get converted to base.css
 _base.scss will NOT get converted and it will only be used as a sass include
 ```
 
+How to lighten or darken colors:
 ```css
-How to lighten or darken colors
 $lighter_color: lighten( $green, 20% );
 $darker_color: darken( $green, 10% );
+```
+
+How to add clean breakpoints for responsive design:
+```css
+/* ==========================================================================
+   Media Queries
+   * How to use breakpoint
+   * @include breakpoint(large) { width: 60%; }
+   ========================================================================== */
+@mixin breakpoint($point) {
+
+    @if $point == small {
+        @media (max-width: 650px) { @content; }
+    }
+    @else if $point == medium {
+        @media (min-width: 651px) and (max-width: 1250px) { @content; }
+    }
+    @else if $point == large {
+        @media (min-width: 1251px) { @content; }
+    }
+}
 ```
