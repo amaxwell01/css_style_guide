@@ -359,3 +359,9 @@ Example:
 base.scss will get converted to base.css
 _base.scss will NOT get converted and it will only be used as a sass include
 ```
+
+```css
+How to lighten or darken colors
+$lighter_color: lighten( $green, 20% );
+$darker_color: darken( $green, 10% );
+```
