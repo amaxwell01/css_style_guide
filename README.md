@@ -367,12 +367,12 @@ $darker_color: darken( $green, 10% );
 ```
 
 ### How to add clean breakpoints for responsive design:
+* Adapted from Chris Coyier - http://css-tricks.com/media-queries-sass-3-2-and-codekit/
 ```css
 /* ==========================================================================
    Media Queries
    * How to use breakpoint
    * @include breakpoint(large) { width: 60%; }
-   * Adapted from Chris Coyier - http://css-tricks.com/media-queries-sass-3-2-and-codekit/
    ========================================================================== */
 @mixin breakpoint($point) {
 
