@@ -340,7 +340,7 @@ Try to break up sass files into manageable files, I prefer to separate my sass b
 (header, footer, sidebar, grids, type, base etc.) This allows for greater flexibility of your files and added 
 organization, since everything should get compiled into a single css file for production.
 
-Main styles.scss file
+### Main styles.scss file
 ```css
 @import 'reset';
 @import 'base';
@@ -354,24 +354,25 @@ Main styles.scss file
 When naming all sass include files, prefix them with an underscore so that the sass compiler doesn't create css
 versions of the file.
 
-Example:
+### Example:
 ```css
 base.scss will get converted to base.css
 _base.scss will NOT get converted and it will only be used as a sass include
 ```
 
-How to lighten or darken colors:
+### How to lighten or darken colors:
 ```css
 $lighter_color: lighten( $green, 20% );
 $darker_color: darken( $green, 10% );
 ```
 
-How to add clean breakpoints for responsive design:
+### How to add clean breakpoints for responsive design:
 ```css
 /* ==========================================================================
    Media Queries
    * How to use breakpoint
    * @include breakpoint(large) { width: 60%; }
+   * Adapted from Chris Coyier - http://css-tricks.com/media-queries-sass-3-2-and-codekit/
    ========================================================================== */
 @mixin breakpoint($point) {
 
