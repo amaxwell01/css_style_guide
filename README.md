@@ -45,6 +45,7 @@ readability.
   without fail. (Preference: spaces)
 * If using spaces, choose the number of characters used per indentation level.
   (Preference: 4 spaces)
+* Leave one empty line at the end of your file for readability
 
 Tip: configure your editor to "show invisibles". This will allow you to
 eliminate end of line whitespace, eliminate unintended blank line whitespace,
