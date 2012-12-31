@@ -31,6 +31,8 @@ contribute.
   matter how many people contributed.
 * Strictly enforce the agreed upon style.
 * If in doubt when deciding upon a style, use existing, common patterns.
+* Use [Normalize.css](http://necolas.github.com/normalize.css) instead of a reset.css and adjust the styles to 
+  fit your standard use cases
 
 
 <a name="whitespace"></a>
